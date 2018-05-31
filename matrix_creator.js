@@ -56,7 +56,13 @@ app.post("/go", function (req, response) {
                       "WT":
                         {
                           "type": "number"
-                        }
+                        },
+                      "ID":
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 256
+                        },
                     }
                 }
             }
@@ -73,7 +79,7 @@ app.post("/go", function (req, response) {
     }
     else {
       //console.log('Invalid: ' + ajv.errorsText(validate.errors));
-      res.status(400).type('application/json').send({
+      response.status(400).type('application/json').send({
         Result: ajv.errorsText(validate.errors)
       });
     }
@@ -88,9 +94,11 @@ app.post("/go", function (req, response) {
     var content = req.body;
     var input_locations = [];
     var input_demands = [];
+    var input_ids = [];
     content.LOC_WT.forEach(element => {
       input_locations.push(element.LOC);
       input_demands.push(element.WT);
+      input_ids.push(element.ID);
     });
 
     var geo_options = {
@@ -98,7 +106,7 @@ app.post("/go", function (req, response) {
 
       // Optional depending on the providers
       httpAdapter: 'https', // Default
-      apiKey: 'AIzaSyC30Jrgb9rlnvvyhAtxbVwdDdvmWrGncjQ', // for Mapquest, OpenCage, Google Premier
+      apiKey: 'AIzaSyDDTRbgT4Bt0B5urIa20OI_stNPWrS_wJY', // for Mapquest, OpenCage, Google Premier
       formatter: null         // 'gpx', 'string', ...
     };
 
@@ -107,19 +115,19 @@ app.post("/go", function (req, response) {
     var points = [];
     geocoder.batchGeocode(input_locations, function (err, results) {
       // Return an array of type {error: false, value: []}
-      //console.log(JSON.stringify(results));
+      console.log(JSON.stringify(results));
       results.forEach(function (element, i) {
         //console.log(element);
         if (element.error != null) {
-          geocodes.push([i, 'ERR', 'ERR', 'ERR']);
+          geocodes.push([input_ids[i], 'ERR', 'ERR', 'ERR']);
           points.push('ERR');
         }
         else if (element.value.length === 0) {
-          geocodes.push([i, 'ERR', 'ERR', 'ERR']);
+          geocodes.push([input_ids[i], 'NO_VAL', 'NO_VAL', 'NO_VAL']);
           points.push('ERR');
         }
         else {
-          geocodes.push([i, element.value[0].latitude, element.value[0].longitude, element.value[0].extra.googlePlaceId]);
+          geocodes.push([input_ids[i], element.value[0].latitude, element.value[0].longitude, element.value[0].extra.googlePlaceId]);
           // insert to points array for computing distance matrix
           points.push([element.value[0].latitude, element.value[0].longitude]);
         }
@@ -157,12 +165,23 @@ app.post("/go", function (req, response) {
       var query = '';
       var err_block = 0;
       // all addresses shd have lat long
+      var lat_long_err = [];
       points.forEach(function (element, i) {
         if (element === 'ERR') {
           err_block = 1;
-          console.log("Fix the addresses at Number : " + (i + 1));
+          lat_long_err.push(input_ids[i]);
+          console.log("Fix the addresses at Number : " + (input_ids[i]));
         }
       });
+
+      if(err_block === 1)
+      {
+        response.status(400).type('application/json').send({
+          error : "Check the Addresses for the following lines - GMaps API Failed to get Lat Longs",
+          error_count : lat_long_err.length,
+          address_indexes : lat_long_err
+        });
+      }
 
       // IF addresses have lat long
       if (err_block != 1) {
@@ -195,7 +214,7 @@ app.post("/go", function (req, response) {
             var body = Buffer.concat(chunks);
             var result = JSON.parse(body.toString());
             var dist = result.distances;
-            console.log(dist);
+            console.log(result);
             // convert meters to miles
             for (var i = 0; i < dist.length; i++) {
               var nest = dist[i];
@@ -217,9 +236,9 @@ app.post("/go", function (req, response) {
             console.log("DEMAND_SECTION");
             final_buffer = Buffer.concat([final_buffer, b12]);
             input_demands.forEach(function (element, i) {
-              b13 = new Buffer(i + ' ' + Math.ceil(element) + "\n");
+              b13 = new Buffer(input_ids[i] + ' ' + Math.ceil(element) + "\n");
               final_buffer = Buffer.concat([final_buffer, b13]);
-              console.log(i + ' ' + Math.ceil(element));
+              console.log(input_ids[i] + ' ' + Math.ceil(element));
             });
             // DEPOT SECTION 
             b14 = new Buffer("DEPOT_SECTION" + "\n");
