@@ -1,8 +1,6 @@
-## vrp_generator
+# VRP file generator for Octa Planner
 
-#### VRP file generator for Octa Planner
-
-Instructions:
+## Instructions:
 
 1. Clone this repositroy.
 2. Make sure you have installed Node JS 
@@ -23,3 +21,36 @@ Other Details
 4. The first location is always the depot. 
 5. The weight of the first location should be WT:0 
 6. The first Location should be the address of the depot 
+
+### Helper Tools : 
+
+#### The below online utility lets you create the payload in a jiffy ! 
+
+http://nimbletext.com/Live/
+
+Data: 227 W Monroe St Chicago IL 60606 USA	,	0	,	9999999999
+
+Pattern : {"LOC": "$0","WT": $1,"ID":"$2"},
+
+Result : {"LOC": "227 W Monroe St Chicago IL 60606 USA","WT": 0,
+"ID":"9999999999"},
+
+#### JSON Payload formatting:
+
+https://jsonformatter.curiousconcept.com/
+
+http://jsonviewer.stack.hu/ 
+
+### APIs Used : 
+
+#### Gmaps - Geocoding
+
+Personal API key - Rate limited. 
+
+#### Graphhopper - Matrix Distance Calculation API 
+
+Free Key - 20x20 Matrix. 
+
+Trial Key - 80x80 Matrix. 
+
+License Key - MxN Matrix. 
