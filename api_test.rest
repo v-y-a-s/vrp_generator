@@ -1,0 +1,61 @@
+
+post http://localhost:3000/go
+Content-Type: application/json
+
+{
+  "LOC_WT": [
+    {
+      "LOC": "Chennai",
+      "WT": 0
+    },
+    {
+      "LOC": "Trichy",
+      "WT": 7000
+    },
+    {
+      "LOC": "Kumbakonam",
+      "WT": 12000
+    },
+    {
+      "LOC": "Vellore",
+      "WT": 18000
+    },
+    {
+      "LOC": "Srirangam",
+      "WT": 35000
+    },
+    {
+      "LOC": "Kaniyakumari",
+      "WT": 41000
+    }
+  ]
+}
+
+###
+
+get https://graphhopper.com/api/1/matrix?vehicle=car&key=703926d2-dd29-4425-9591-d49100485729
+&from_point=41.8802596,-87.6346818
+&from_point=39.941178,-83.30838
+&from_point=45.517315,-122.675655
+&from_point=37.09024,-95.712891
+&from_point=39.08998,-95.743528
+&from_point=33.925801,-84.346631
+&from_point=33.925801,-84.346631
+&from_point=36.089586,-95.855641
+&from_point=41.425745,-81.679576
+&from_point=33.987826,-81.041049
+&from_point=37.09024,-95.712891
+&to_point=41.8802596,-87.6346818
+&to_point=39.941178,-83.30838
+&to_point=45.517315,-122.675655
+&to_point=37.09024,-95.712891
+&to_point=39.08998,-95.743528
+&to_point=33.925801,-84.346631
+&to_point=33.925801,-84.346631
+&to_point=36.089586,-95.855641
+&to_point=41.425745,-81.679576
+&to_point=33.987826,-81.041049
+&to_point=37.09024,-95.712891
+&out_array=distances&out_array=times
+###
+
