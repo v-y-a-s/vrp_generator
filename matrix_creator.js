@@ -28,6 +28,8 @@ app.post("/go", function (req, response) {
       "type": "object",
       "required":
         [
+          "CAPACITY",
+          "VEHICLES",
           "LOC_WT"
         ],
       "properties":
@@ -138,8 +140,8 @@ app.post("/go", function (req, response) {
       console.log("EDGE_WEIGHT_FORMAT: FULL_MATRIX");
       b7 = new Buffer("EDGE_WEIGHT_UNIT_OF_MEASUREMENT: km" + "\n");
       console.log("EDGE_WEIGHT_UNIT_OF_MEASUREMENT: km");
-      b8 = new Buffer("CAPACITY : 42000" + "\n");
-      console.log("CAPACITY : 42000");
+      b8 = new Buffer("CAPACITY : "+content.CAPACITY+"\n");
+      console.log("CAPACITY : "+content.CAPACITY);
 
       //  PRINTING  NODE COORD 
       console.log("NODE_COORD_SECTION");
@@ -178,7 +180,7 @@ app.post("/go", function (req, response) {
           "method": "get",
           "hostname": "graphhopper.com",
           "port": null,
-          "path": "/api/1/matrix?out_array=distances&out_array=times&key=703926d2-dd29-4425-9591-d49100485729&vehicle=car" + query,
+          "path": "/api/1/matrix?out_array=distances&out_array=times&key=b43ae00c-0b71-47a4-af78-4915b7205011&vehicle=car" + query,
           "headers": {}
         };
 
@@ -193,7 +195,7 @@ app.post("/go", function (req, response) {
             var body = Buffer.concat(chunks);
             var result = JSON.parse(body.toString());
             var dist = result.distances;
-            //console.log(dist);
+            console.log(dist);
             // convert meters to miles
             for (var i = 0; i < dist.length; i++) {
               var nest = dist[i];
@@ -215,9 +217,9 @@ app.post("/go", function (req, response) {
             console.log("DEMAND_SECTION");
             final_buffer = Buffer.concat([final_buffer, b12]);
             input_demands.forEach(function (element, i) {
-              b13 = new Buffer(i + ' ' + element + "\n");
+              b13 = new Buffer(i + ' ' + Math.ceil(element) + "\n");
               final_buffer = Buffer.concat([final_buffer, b13]);
-              console.log(i + ' ' + element);
+              console.log(i + ' ' + Math.ceil(element));
             });
             // DEPOT SECTION 
             b14 = new Buffer("DEPOT_SECTION" + "\n");
@@ -231,7 +233,7 @@ app.post("/go", function (req, response) {
             final_buffer = Buffer.concat([final_buffer, b14, b15, b16, b17]);
 
 
-            new_path = 'D:/res/problems_usa_zekleer' + this_ts + '-road-km-d1-n' + geocodes.length + '-k50.vrp';
+            new_path = 'D:/res/problems_usa_zekleer' + this_ts + '-road-km-d1-n' + geocodes.length + '-k'+content.VEHICLES+'.vrp';
             fs.writeFile(new_path, '', (err) => {
               if (err) throw err;
 

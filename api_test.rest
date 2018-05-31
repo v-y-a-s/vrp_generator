@@ -3,59 +3,56 @@ post http://localhost:3000/go
 Content-Type: application/json
 
 {
+  "CAPACITY" : 48000,
+  "VEHICLES" : 55,
   "LOC_WT": [
-    {
-      "LOC": "Chennai",
-      "WT": 0
-    },
-    {
-      "LOC": "Trichy",
-      "WT": 7000
-    },
-    {
-      "LOC": "Kumbakonam",
-      "WT": 12000
-    },
-    {
-      "LOC": "Vellore",
-      "WT": 18000
-    },
-    {
-      "LOC": "Srirangam",
-      "WT": 35000
-    },
-    {
-      "LOC": "Kaniyakumari",
-      "WT": 41000
-    }
+{"LOC": "227 W Monroe St Chicago IL 60606 USA","WT": 0},
+{"LOC": "UNITED PIPE & STEEL CORP. - WH    2516 INDUSTRY DRIVE            BURLINGTON      27215","WT": 45766.7},
+{"LOC": "UNITED PIPE & STEEL CORP. - WH    83 TURNPIKE ROAD               IPSWICH         1938","WT": 45655.56},
+{"LOC": "CED/PERRY MANN ELECTRIC           497 HUGER STREET               Columbia        29201","WT": 20655},
+{"LOC": "GAYLOR ELECTRIC-PHILLIP SIMMON    1613 CLEMENTS FERRY ROAD       CHARLESTON      29492","WT": 21221.73},
+{"LOC": "UNITED PIPE & STEEL CORP. - WH    206 SOUTH LILAC AVENUE         RIALTO          92376","WT": 43546.08},
+{"LOC": "SUPERIOR ELECTRIC SUPPLY CO (A    9445 W RIDGE RD                Elyria          44036","WT": 15156.54},
+{"LOC": "C.E.D./LEADER ELECTRIC SUPPLY     4711 HINCKLEY INDUSTRIAL PARKW Cleveland       44109","WT": 202.8},
+{"LOC": "C.E.D./LEADER ELECTRIC SUPPLY     4711 HINCKLEY INDUSTRIAL PARKW Cleveland       44109","WT": 19581.84},
+{"LOC": "FENTON BROS. *                    235 RAY AVE N.E.               NEW PHILADELPHIA44663","WT": 8255.08},
+{"LOC": "Allied Fence Company              905 Cripple Creek Dr.          Lawrenceville   30043-4404","WT": 16338.98},
+{"LOC": "MERCHANTS METALS INC              300 ALBA BLVD                  LAWRENCEVILLE   30043","WT": 19100.7},
+{"LOC": "MERCHANTS METALS INC              1010 CITIZENS PARKWAY          MORROW          30260-0000","WT": 7992.85},
+{"LOC": "MERCHANTS METALS INC              2045 NE 46th AVE               DES MOINES      50313","WT": 43756.65},
+{"LOC": "MASTER-HALCO INC/MANCHESTER       6 BEAVER BROOK                 AUBURN          03032-0000","WT": 45008.77},
+{"LOC": "SHARON FENCE COMPANY              1 MILLER COURT                 SHARON          16146","WT": 2953.22},
+{"LOC": "CITY ELECTRIC SUPPLY              1500 - B EAST CLUB BLVD        Durham          27704","WT": 23447.31},
+{"LOC": "CITY ELECTRIC SUPPLY              410 WHITE STREET               JACKSONVILLE    28546","WT": 21378.5},
+{"LOC": "MERCHANTS METALS INC              4921 JOANNE KEARNEY BLVD       TAMPA           33619","WT": 40691.13},
+{"LOC": "WARREN DEL CARIBE                 13130 NW 113th CT              Medley          33178","WT": 39589.07},
+{"LOC": "MASTER-HALCO INC                  9800 REEVES RD                 TAMPA           33619-7713","WT": 5636.4},
+{"LOC": "PARAMONT EO *                     1000 DAVEY ROAD. SUITE 100     WOODRIDGE       60517","WT": 41652.57},
+{"LOC": "ELECTRIC COMPANY                  2740 CALUMET AVE               Hammond         46320","WT": 56.75},
+{"LOC": "CRESCENT JOLIET. IL               1867 CRESCENT WAY              ROCKDALE        60436","WT": 2302.77},
+{"LOC": "GRAYBAR ELECTRIC COMPANY. INC     1700 CROSSROAD DR              JOLIET          60431","WT": 657.2},
+{"LOC": "UNITED PIPE & STEEL CORP. - WH    2916 WILLIAM PENN HIGHWAY      EASTON          18045","WT": 44191.22},
+{"LOC": "UNITED PIPE & STEEL CORP. - WH    2916 WILLIAM PENN HIGHWAY      EASTON          18045","WT": 44674.38},
+{"LOC": "UTILITY SALES. INC.               1075 HWY 25 BY-PASS . SE       GREENWOOD       29646","WT": 47603.65},
+{"LOC": "VAN METER INC.-AD                 915 32ND AVE SW                Cedar Rapids    52404","WT": 42289.8},
+{"LOC": "STEINER ELECTRIC-ELK GROVE        1250 TOUHY AVE                 ELK GROVE VLG   60007","WT": 6606},
+{"LOC": "STEINER ELECTRIC-ELK GROVE        1250 TOUHY AVE                 ELK GROVE VLG   60007","WT": 8347.5},
+{"LOC": "STEINER ELECTRIC-ROCKFORD         6900 ROCK VALLEY PKWY          LOVES PARK      61111","WT": 10116.72},
+{"LOC": "REVERE ELECTRIC SUPPLY CO         4602 INTERSTATE BLVD           Loves Park      61111","WT": 16234.6},
+{"LOC": "TUBULAR USA                       4641 CROSSROADS INDUISTRIAL DR BRIDGETON       63044","WT": 39305.34},
+{"LOC": "TUBULAR USA BUILDING 2            821 WESTWOOD INDUSTRIAL PARK DRWELDON SPRING   63304","WT": 44041.8},
+{"LOC": "SONCO WORLDWIDE INC               805 N. WILSON AVENUE           BRISTOL         19007","WT": 3366},
+{"LOC": "ATLAS MANUFACTURING. INC          9596 US 82                     ALAPAHA         31622-0000","WT": 42800.63},
+{"LOC": "UNITED PIPE & STEEL CORP. - WH    206 SOUTH LILAC AVENUE         RIALTO          92376","WT": 36847.4},
+{"LOC": "C.E.D./DBA ELECT & INDUST         310 S LOCKARD                  Blytheville     72315","WT": 44733.2},
+{"LOC": "EECOL ELECTRIC LTD                2906 MILLAR AVE                Saskatoon       S7K 5X7","WT": 42898.25}
   ]
 }
 
 ###
 
 get https://graphhopper.com/api/1/matrix?vehicle=car&key=703926d2-dd29-4425-9591-d49100485729
-&from_point=41.8802596,-87.6346818
-&from_point=39.941178,-83.30838
-&from_point=45.517315,-122.675655
-&from_point=37.09024,-95.712891
-&from_point=39.08998,-95.743528
-&from_point=33.925801,-84.346631
-&from_point=33.925801,-84.346631
-&from_point=36.089586,-95.855641
-&from_point=41.425745,-81.679576
-&from_point=33.987826,-81.041049
-&from_point=37.09024,-95.712891
-&to_point=41.8802596,-87.6346818
-&to_point=39.941178,-83.30838
-&to_point=45.517315,-122.675655
-&to_point=37.09024,-95.712891
-&to_point=39.08998,-95.743528
-&to_point=33.925801,-84.346631
-&to_point=33.925801,-84.346631
-&to_point=36.089586,-95.855641
-&to_point=41.425745,-81.679576
-&to_point=33.987826,-81.041049
-&to_point=37.09024,-95.712891
+&from_point=41.8802596,-87.6346818&to_point=41.8802596,-87.6346818&from_point=36.0619759,-79.4476071&to_point=36.0619759,-79.4476071&from_point=42.6879474,-70.9157259&to_point=42.6879474,-70.9157259&from_point=33.987826,-81.041049&to_point=33.987826,-81.041049&from_point=32.9188957,-79.8492618&to_point=32.9188957,-79.8492618&from_point=34.09744209999999,-117.3804902&to_point=34.09744209999999,-117.3804902&from_point=41.3531501,-82.1555612&to_point=41.3531501,-82.1555612&from_point=41.425745,-81.679576&to_point=41.425745,-81.679576&from_point=41.425745,-81.679576&to_point=41.425745,-81.679576&from_point=40.4926074,-81.4409175&to_point=40.4926074,-81.4409175&from_point=33.9859764,-83.98695710000001&to_point=33.9859764,-83.98695710000001&from_point=33.984674,-83.987419&to_point=33.984674,-83.987419&from_point=33.5601607,-84.3577159&to_point=33.5601607,-84.3577159&from_point=30.4526916,-97.6576364&to_point=30.4526916,-97.6576364&from_point=41.6441096,-93.58128289999999&to_point=41.6441096,-93.58128289999999&from_point=42.9462188,-71.3503149&to_point=42.9462188,-71.3503149&from_point=41.2222595,-80.5077105&to_point=41.2222595,-80.5077105&from_point=41.2222595,-80.5077105&to_point=41.2222595,-80.5077105&from_point=36.0270195,-78.86874139999999&to_point=36.0270195,-78.86874139999999&from_point=34.7558406,-77.3905706&to_point=34.7558406,-77.3905706&from_point=27.9059438,-82.3830942&to_point=27.9059438,-82.3830942&from_point=25.890844,-80.378247&to_point=25.890844,-80.378247&from_point=27.9705094,-82.3379827&to_point=27.9705094,-82.3379827&from_point=41.6949504,-88.0067377&to_point=41.6949504,-88.0067377&from_point=41.663132,-87.50997799999999&to_point=41.663132,-87.50997799999999&from_point=41.5058132,-88.1253059&to_point=41.5058132,-88.1253059
 &out_array=distances&out_array=times
 ###
 
