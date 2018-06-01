@@ -13,7 +13,67 @@ Content-Type: application/json
 {"LOC": "1613 CLEMENTS FERRY ROAD       CHARLESTON      29492","WT": 21221.73,"ID":"81409398"},
 {"LOC": "206 SOUTH LILAC AVENUE         RIALTO          92376","WT": 43546.08,"ID":"81409435"},
 {"LOC": "9445 W RIDGE RD                Elyria          44036","WT": 15156.54,"ID":"81409414"},
-{"LOC": "4711 HINCKLEY INDUSTRIAL PARKW Cleveland       44109","WT": 202.8,"ID":"81409393"}
+{"LOC": "4711 HINCKLEY INDUSTRIAL PARKW Cleveland       44109","WT": 202.8,"ID":"81409393"},
+{"LOC": "4711 HINCKLEY INDUSTRIAL PARKW Cleveland       44109","WT": 19581.84,"ID":"81409394"},
+{"LOC": "235 RAY AVE N.E.               NEW PHILADELPHIA44663","WT": 8255.08,"ID":"81409415"},
+{"LOC": "905 Cripple Creek Dr.          Lawrenceville   30043-4404","WT": 16338.98,"ID":"81409386"},
+{"LOC": "300 ALBA BLVD                  LAWRENCEVILLE   30043","WT": 19100.7,"ID":"81409378"},
+{"LOC": "1010 CITIZENS PARKWAY          MORROW          30260-0000","WT": 7992.85,"ID":"81409382"},
+{"LOC": "1501 CENTRAL COMMERCE CIRCLE   PFLUGERVILLE    78660-0000","WT": 41730.16,"ID":"81409375"},
+{"LOC": "2045 NE 46th AVE               DES MOINES      50313","WT": 43756.65,"ID":"81409387"},
+{"LOC": "6 BEAVER BROOK                 AUBURN          03032-0000","WT": 45008.77,"ID":"81409421"},
+{"LOC": "1 MILLER COURT                 SHARON          16146","WT": 9274.86,"ID":"81409429"},
+{"LOC": "1 MILLER COURT                 SHARON          16146","WT": 2953.22,"ID":"81409434"},
+{"LOC": "1500 - B EAST CLUB BLVD        Durham          27704","WT": 23447.31,"ID":"81409422"},
+{"LOC": "410 WHITE STREET               JACKSONVILLE    28546","WT": 21378.5,"ID":"81409424"},
+{"LOC": "4921 JOANNE KEARNEY BLVD       TAMPA           33619","WT": 40691.13,"ID":"81409445"},
+{"LOC": "13130 NW 113th CT              Medley          33178","WT": 39589.07,"ID":"81409442"},
+{"LOC": "9800 REEVES RD                 TAMPA           33619-7713","WT": 5636.4,"ID":"81409443"},
+{"LOC": "1000 DAVEY ROAD. SUITE 100     WOODRIDGE       60517","WT": 41652.57,"ID":"81409466"},
+{"LOC": "2740 CALUMET AVE               Hammond         46320","WT": 56.75,"ID":"81409467"},
+{"LOC": "1867 CRESCENT WAY              ROCKDALE        60436","WT": 2302.77,"ID":"81409779"},
+{"LOC": "1700 CROSSROAD DR              JOLIET          60431","WT": 657.2,"ID":"81409780"},
+{"LOC": "2916 WILLIAM PENN HIGHWAY      EASTON          18045","WT": 44191.22,"ID":"81409523"},
+{"LOC": "2916 WILLIAM PENN HIGHWAY      EASTON          18045","WT": 44674.38,"ID":"81409524"},
+{"LOC": "1075 HWY 25 BY-PASS . SE       GREENWOOD       29646","WT": 47603.65,"ID":"81409575"},
+{"LOC": "915 32ND AVE SW                Cedar Rapids    52404","WT": 42289.8,"ID":"81409620"},
+{"LOC": "1250 TOUHY AVE                 ELK GROVE VLG   60007","WT": 6606,"ID":"81409642"},
+{"LOC": "1250 TOUHY AVE                 ELK GROVE VLG   60007","WT": 8347.5,"ID":"81409650"},
+{"LOC": "6900 ROCK VALLEY PKWY          LOVES PARK      61111","WT": 10116.72,"ID":"81409641"},
+{"LOC": "4602 INTERSTATE BLVD           Loves Park      61111","WT": 16234.6,"ID":"81409490"},
+{"LOC": "4641 CROSSROADS INDUISTRIAL DR BRIDGETON       63044","WT": 39305.34,"ID":"81409545"},
+{"LOC": "821 WESTWOOD INDUSTRIAL PARK DRWELDON SPRING   63304","WT": 44041.8,"ID":"81409598"},
+{"LOC": "805 N. WILSON AVENUE           BRISTOL         19007","WT": 3366,"ID":"81409674"},
+{"LOC": "9596 US 82                     ALAPAHA         31622-0000","WT": 42800.63,"ID":"81410169"},
+{"LOC": "206 SOUTH LILAC AVENUE         RIALTO          92376","WT": 36847.4,"ID":"81410057"},
+{"LOC": "310 S LOCKARD                  Blytheville     72315","WT": 44733.2,"ID":"81409707"},
+{"LOC": "2906 MILLAR AVE                Saskatoon       S7K 5X7","WT": 42898.25,"ID":"81410051"},
+{"LOC": "3555 SARTELON                  ST LAURENT      H4R 0K5","WT": 7183.95,"ID":"81410066"},
+{"LOC": "3555 SARTELON                  ST LAURENT      H4R 0K5","WT": 1191.21,"ID":"81410067"},
+{"LOC": "3707-A ALLIANCE DR             Greensboro      27407","WT": 9812.04,"ID":"81410084"},
+{"LOC": "3707-A ALLIANCE DR             Greensboro      27407","WT": 8957.22,"ID":"81410085"},
+{"LOC": "407-A POMONA DR                Greensboro      27407","WT": 16166.22,"ID":"81410083"},
+{"LOC": "2425-A WESTINGHOUSE BLVD       Charlotte       28273","WT": 11999.04,"ID":"81410086"},
+{"LOC": "2475 S MAIN ST - SUITE D       HARRISONBURG    22801","WT": 12777,"ID":"81410092"},
+{"LOC": "619 W CHURCH ST                Martinsville    24112","WT": 7401.6,"ID":"81410091"},
+{"LOC": "518 NEWTON ST                  DANVILLE        24541","WT": 24135.4,"ID":"81410093"},
+{"LOC": "1501 WEST MAIN ST              WEST JEFFERSON  43162","WT": 14742.94,"ID":"81406324"},
+{"LOC": "1501 WEST MAIN ST              WEST JEFFERSON  43162","WT": 9126.17,"ID":"81406990"},
+{"LOC": "1501 WEST MAIN ST              WEST JEFFERSON  43162","WT": 10616.76,"ID":"81410133"},
+{"LOC": "1357 E LINCOLN                 Madison Heights 48071","WT": 33615,"ID":"81410164"},
+{"LOC": "1357 E LINCOLN                 Madison Heights 48071","WT": 5292,"ID":"81410165"},
+{"LOC": "4670 RUNWAY BLVD               ANN ARBOR       48108","WT": 6885,"ID":"81410167"},
+{"LOC": "8180 TROON CIR                 AUSTELL         30168","WT": 42013.61,"ID":"81410180"},
+{"LOC": "8511 PEPCO PLACE               UPPER MARLBORO  20772","WT": 45582.35,"ID":"81410190"},
+{"LOC": "6100 COLUMBIA PARK ROAD        HYATTSVILLE     20785","WT": 28397.74,"ID":"81410121"},
+{"LOC": "6100 COLUMBIA PARK ROAD        HYATTSVILLE     20785","WT": 15878.84,"ID":"81410122"},
+{"LOC": "5454 NORTH WASHINGTON          DENVER          80216-1700","WT": 10249.17,"ID":"81410124"},
+{"LOC": "5454 NORTH WASHINGTON          DENVER          80216-1700","WT": 36899.01,"ID":"81410126"},
+{"LOC": "4901 LANGLEY RD                HOUSTON         77093-5093","WT": 38603.29,"ID":"81410145"},
+{"LOC": "4901 LANGLEY RD                HOUSTON         77093-5093","WT": 43138.89,"ID":"81410146"},
+{"LOC": "63 MANLEY STREET               WEST BRIDGEWATER02379-1016","WT": 43560.84,"ID":"81410149"},
+{"LOC": "6 BEAVER BROOK                 AUBURN          03032-0000","WT": 46098.07,"ID":"81410150"},
+{"LOC": "6 BEAVER BROOK                 AUBURN          03032-0000","WT": 39526.42,"ID":"81410158"}
   ]
 }
 
@@ -24,3 +84,802 @@ get https://graphhopper.com/api/1/matrix?vehicle=car&key=703926d2-dd29-4425-9591
 &out_array=distances&out_array=times
 ###
 
+post http://localhost:3000/parse
+Content-Type: application/xml
+
+ 
+  <vehicleList id="155">
+    <VrpVehicle id="156">
+      <id>0</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="157">
+      <id>1</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="158">
+        <id>81409620</id>
+        <location class="VrpRoadLocation" reference="63"/>
+        <demand>42290</demand>
+        <previousStandstill class="VrpVehicle" reference="157"/>
+        <vehicle reference="157"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="159">
+      <id>2</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="160">
+        <id>81410084</id>
+        <location class="VrpRoadLocation" reference="91"/>
+        <demand>9813</demand>
+        <previousStandstill class="VrpVehicle" reference="159"/>
+        <nextCustomer id="161">
+          <id>81410085</id>
+          <location class="VrpRoadLocation" reference="93"/>
+          <demand>8958</demand>
+          <previousStandstill class="VrpCustomer" reference="160"/>
+          <nextCustomer id="162">
+            <id>81410083</id>
+            <location class="VrpRoadLocation" reference="95"/>
+            <demand>16167</demand>
+            <previousStandstill class="VrpCustomer" reference="161"/>
+            <nextCustomer id="163">
+              <id>81410091</id>
+              <location class="VrpRoadLocation" reference="101"/>
+              <demand>7402</demand>
+              <previousStandstill class="VrpCustomer" reference="162"/>
+              <vehicle reference="159"/>
+            </nextCustomer>
+            <vehicle reference="159"/>
+          </nextCustomer>
+          <vehicle reference="159"/>
+        </nextCustomer>
+        <vehicle reference="159"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="164">
+      <id>3</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="165">
+        <id>81409398</id>
+        <location class="VrpRoadLocation" reference="11"/>
+        <demand>21222</demand>
+        <previousStandstill class="VrpVehicle" reference="164"/>
+        <nextCustomer id="166">
+          <id>81409396</id>
+          <location class="VrpRoadLocation" reference="9"/>
+          <demand>20655</demand>
+          <previousStandstill class="VrpCustomer" reference="165"/>
+          <vehicle reference="164"/>
+        </nextCustomer>
+        <vehicle reference="164"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="167">
+      <id>4</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="168">
+        <id>81409524</id>
+        <location class="VrpRoadLocation" reference="59"/>
+        <demand>44675</demand>
+        <previousStandstill class="VrpVehicle" reference="167"/>
+        <vehicle reference="167"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="169">
+      <id>5</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="170">
+        <id>81410161</id>
+        <location class="VrpRoadLocation" reference="139"/>
+        <demand>43242</demand>
+        <previousStandstill class="VrpVehicle" reference="169"/>
+        <vehicle reference="169"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="171">
+      <id>6</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="172">
+      <id>7</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="173">
+        <id>81409674</id>
+        <location class="VrpRoadLocation" reference="77"/>
+        <demand>3366</demand>
+        <previousStandstill class="VrpVehicle" reference="172"/>
+        <nextCustomer id="174">
+          <id>81410149</id>
+          <location class="VrpRoadLocation" reference="133"/>
+          <demand>43561</demand>
+          <previousStandstill class="VrpCustomer" reference="173"/>
+          <vehicle reference="172"/>
+        </nextCustomer>
+        <vehicle reference="172"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="175">
+      <id>8</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="176">
+        <id>81409523</id>
+        <location class="VrpRoadLocation" reference="57"/>
+        <demand>44192</demand>
+        <previousStandstill class="VrpVehicle" reference="175"/>
+        <vehicle reference="175"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="177">
+      <id>9</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="178">
+        <id>81409414</id>
+        <location class="VrpRoadLocation" reference="15"/>
+        <demand>15157</demand>
+        <previousStandstill class="VrpVehicle" reference="177"/>
+        <nextCustomer id="179">
+          <id>81409394</id>
+          <location class="VrpRoadLocation" reference="19"/>
+          <demand>19582</demand>
+          <previousStandstill class="VrpCustomer" reference="178"/>
+          <nextCustomer id="180">
+            <id>81409393</id>
+            <location class="VrpRoadLocation" reference="17"/>
+            <demand>203</demand>
+            <previousStandstill class="VrpCustomer" reference="179"/>
+            <vehicle reference="177"/>
+          </nextCustomer>
+          <vehicle reference="177"/>
+        </nextCustomer>
+        <vehicle reference="177"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="181">
+      <id>10</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="182">
+        <id>81409707</id>
+        <location class="VrpRoadLocation" reference="83"/>
+        <demand>44734</demand>
+        <previousStandstill class="VrpVehicle" reference="181"/>
+        <vehicle reference="181"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="183">
+      <id>11</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="184">
+      <id>12</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="185">
+        <id>81409429</id>
+        <location class="VrpRoadLocation" reference="35"/>
+        <demand>9275</demand>
+        <previousStandstill class="VrpVehicle" reference="184"/>
+        <nextCustomer id="186">
+          <id>81410092</id>
+          <location class="VrpRoadLocation" reference="99"/>
+          <demand>12777</demand>
+          <previousStandstill class="VrpCustomer" reference="185"/>
+          <nextCustomer id="187">
+            <id>81410093</id>
+            <location class="VrpRoadLocation" reference="103"/>
+            <demand>24136</demand>
+            <previousStandstill class="VrpCustomer" reference="186"/>
+            <vehicle reference="184"/>
+          </nextCustomer>
+          <vehicle reference="184"/>
+        </nextCustomer>
+        <vehicle reference="184"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="188">
+      <id>13</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="189">
+        <id>81409443</id>
+        <location class="VrpRoadLocation" reference="47"/>
+        <demand>5637</demand>
+        <previousStandstill class="VrpVehicle" reference="188"/>
+        <nextCustomer id="190">
+          <id>81409445</id>
+          <location class="VrpRoadLocation" reference="43"/>
+          <demand>40692</demand>
+          <previousStandstill class="VrpCustomer" reference="189"/>
+          <vehicle reference="188"/>
+        </nextCustomer>
+        <vehicle reference="188"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="191">
+      <id>14</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="192">
+        <id>81410145</id>
+        <location class="VrpRoadLocation" reference="129"/>
+        <demand>38604</demand>
+        <previousStandstill class="VrpVehicle" reference="191"/>
+        <vehicle reference="191"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="193">
+      <id>15</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="194">
+        <id>81409598</id>
+        <location class="VrpRoadLocation" reference="75"/>
+        <demand>44042</demand>
+        <previousStandstill class="VrpVehicle" reference="193"/>
+        <vehicle reference="193"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="195">
+      <id>16</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="196">
+      <id>17</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="197">
+        <id>81410150</id>
+        <location class="VrpRoadLocation" reference="135"/>
+        <demand>46099</demand>
+        <previousStandstill class="VrpVehicle" reference="196"/>
+        <vehicle reference="196"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="198">
+      <id>18</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="199">
+        <id>81410162</id>
+        <location class="VrpRoadLocation" reference="141"/>
+        <demand>42494</demand>
+        <previousStandstill class="VrpVehicle" reference="198"/>
+        <vehicle reference="198"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="200">
+      <id>19</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="201">
+        <id>81409378</id>
+        <location class="VrpRoadLocation" reference="25"/>
+        <demand>19101</demand>
+        <previousStandstill class="VrpVehicle" reference="200"/>
+        <nextCustomer id="202">
+          <id>81409386</id>
+          <location class="VrpRoadLocation" reference="23"/>
+          <demand>16339</demand>
+          <previousStandstill class="VrpCustomer" reference="201"/>
+          <vehicle reference="200"/>
+        </nextCustomer>
+        <vehicle reference="200"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="203">
+      <id>20</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="204">
+        <id>81409424</id>
+        <location class="VrpRoadLocation" reference="41"/>
+        <demand>21379</demand>
+        <previousStandstill class="VrpVehicle" reference="203"/>
+        <nextCustomer id="205">
+          <id>81409422</id>
+          <location class="VrpRoadLocation" reference="39"/>
+          <demand>23448</demand>
+          <previousStandstill class="VrpCustomer" reference="204"/>
+          <vehicle reference="203"/>
+        </nextCustomer>
+        <vehicle reference="203"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="206">
+      <id>21</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="207">
+      <id>22</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="208">
+        <id>81410265</id>
+        <location class="VrpRoadLocation" reference="151"/>
+        <demand>8426</demand>
+        <previousStandstill class="VrpVehicle" reference="207"/>
+        <nextCustomer id="209">
+          <id>81410277</id>
+          <location class="VrpRoadLocation" reference="149"/>
+          <demand>13442</demand>
+          <previousStandstill class="VrpCustomer" reference="208"/>
+          <nextCustomer id="210">
+            <id>81410086</id>
+            <location class="VrpRoadLocation" reference="97"/>
+            <demand>12000</demand>
+            <previousStandstill class="VrpCustomer" reference="209"/>
+            <nextCustomer id="211">
+              <id>81409415</id>
+              <location class="VrpRoadLocation" reference="21"/>
+              <demand>8256</demand>
+              <previousStandstill class="VrpCustomer" reference="210"/>
+              <nextCustomer id="212">
+                <id>81409467</id>
+                <location class="VrpRoadLocation" reference="51"/>
+                <demand>57</demand>
+                <previousStandstill class="VrpCustomer" reference="211"/>
+                <vehicle reference="207"/>
+              </nextCustomer>
+              <vehicle reference="207"/>
+            </nextCustomer>
+            <vehicle reference="207"/>
+          </nextCustomer>
+          <vehicle reference="207"/>
+        </nextCustomer>
+        <vehicle reference="207"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="213">
+      <id>23</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="214">
+        <id>81410126</id>
+        <location class="VrpRoadLocation" reference="127"/>
+        <demand>36900</demand>
+        <previousStandstill class="VrpVehicle" reference="213"/>
+        <nextCustomer id="215">
+          <id>81410124</id>
+          <location class="VrpRoadLocation" reference="125"/>
+          <demand>10250</demand>
+          <previousStandstill class="VrpCustomer" reference="214"/>
+          <vehicle reference="213"/>
+        </nextCustomer>
+        <vehicle reference="213"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="216">
+      <id>24</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="217">
+        <id>81409421</id>
+        <location class="VrpRoadLocation" reference="33"/>
+        <demand>45009</demand>
+        <previousStandstill class="VrpVehicle" reference="216"/>
+        <nextCustomer id="218">
+          <id>81409434</id>
+          <location class="VrpRoadLocation" reference="37"/>
+          <demand>2954</demand>
+          <previousStandstill class="VrpCustomer" reference="217"/>
+          <vehicle reference="216"/>
+        </nextCustomer>
+        <vehicle reference="216"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="219">
+      <id>25</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="220">
+      <id>26</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="221">
+        <id>81410234</id>
+        <location class="VrpRoadLocation" reference="147"/>
+        <demand>40599</demand>
+        <previousStandstill class="VrpVehicle" reference="220"/>
+        <vehicle reference="220"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="222">
+      <id>27</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="223">
+        <id>81409331</id>
+        <location class="VrpRoadLocation" reference="7"/>
+        <demand>45656</demand>
+        <previousStandstill class="VrpVehicle" reference="222"/>
+        <vehicle reference="222"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="224">
+      <id>28</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="225">
+      <id>29</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="226">
+        <id>81410158</id>
+        <location class="VrpRoadLocation" reference="137"/>
+        <demand>39527</demand>
+        <previousStandstill class="VrpVehicle" reference="225"/>
+        <nextCustomer id="227">
+          <id>81410066</id>
+          <location class="VrpRoadLocation" reference="87"/>
+          <demand>7184</demand>
+          <previousStandstill class="VrpCustomer" reference="226"/>
+          <nextCustomer id="228">
+            <id>81410067</id>
+            <location class="VrpRoadLocation" reference="89"/>
+            <demand>1192</demand>
+            <previousStandstill class="VrpCustomer" reference="227"/>
+            <vehicle reference="225"/>
+          </nextCustomer>
+          <vehicle reference="225"/>
+        </nextCustomer>
+        <vehicle reference="225"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="229">
+      <id>30</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="230">
+      <id>31</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="231">
+        <id>81409387</id>
+        <location class="VrpRoadLocation" reference="31"/>
+        <demand>43757</demand>
+        <previousStandstill class="VrpVehicle" reference="230"/>
+        <vehicle reference="230"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="232">
+      <id>32</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="233">
+        <id>81410051</id>
+        <location class="VrpRoadLocation" reference="85"/>
+        <demand>42899</demand>
+        <previousStandstill class="VrpVehicle" reference="232"/>
+        <vehicle reference="232"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="234">
+      <id>33</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="235">
+        <id>81410057</id>
+        <location class="VrpRoadLocation" reference="81"/>
+        <demand>36848</demand>
+        <previousStandstill class="VrpVehicle" reference="234"/>
+        <vehicle reference="234"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="236">
+      <id>34</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="237">
+        <id>81409545</id>
+        <location class="VrpRoadLocation" reference="73"/>
+        <demand>39306</demand>
+        <previousStandstill class="VrpVehicle" reference="236"/>
+        <vehicle reference="236"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="238">
+      <id>35</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="239">
+        <id>81409382</id>
+        <location class="VrpRoadLocation" reference="27"/>
+        <demand>7993</demand>
+        <previousStandstill class="VrpVehicle" reference="238"/>
+        <nextCustomer id="240">
+          <id>81409442</id>
+          <location class="VrpRoadLocation" reference="45"/>
+          <demand>39590</demand>
+          <previousStandstill class="VrpCustomer" reference="239"/>
+          <vehicle reference="238"/>
+        </nextCustomer>
+        <vehicle reference="238"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="241">
+      <id>36</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="242">
+      <id>37</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="243">
+        <id>81410190</id>
+        <location class="VrpRoadLocation" reference="119"/>
+        <demand>45583</demand>
+        <previousStandstill class="VrpVehicle" reference="242"/>
+        <vehicle reference="242"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="244">
+      <id>38</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="245">
+      <id>39</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="246">
+        <id>81406990</id>
+        <location class="VrpRoadLocation" reference="107"/>
+        <demand>9127</demand>
+        <previousStandstill class="VrpVehicle" reference="245"/>
+        <nextCustomer id="247">
+          <id>81410133</id>
+          <location class="VrpRoadLocation" reference="109"/>
+          <demand>10617</demand>
+          <previousStandstill class="VrpCustomer" reference="246"/>
+          <nextCustomer id="248">
+            <id>81406324</id>
+            <location class="VrpRoadLocation" reference="105"/>
+            <demand>14743</demand>
+            <previousStandstill class="VrpCustomer" reference="247"/>
+            <vehicle reference="245"/>
+          </nextCustomer>
+          <vehicle reference="245"/>
+        </nextCustomer>
+        <vehicle reference="245"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="249">
+      <id>40</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="250">
+      <id>41</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="251">
+        <id>81410121</id>
+        <location class="VrpRoadLocation" reference="121"/>
+        <demand>28398</demand>
+        <previousStandstill class="VrpVehicle" reference="250"/>
+        <nextCustomer id="252">
+          <id>81410122</id>
+          <location class="VrpRoadLocation" reference="123"/>
+          <demand>15879</demand>
+          <previousStandstill class="VrpCustomer" reference="251"/>
+          <vehicle reference="250"/>
+        </nextCustomer>
+        <vehicle reference="250"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="253">
+      <id>42</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="254">
+        <id>81410167</id>
+        <location class="VrpRoadLocation" reference="115"/>
+        <demand>6885</demand>
+        <previousStandstill class="VrpVehicle" reference="253"/>
+        <nextCustomer id="255">
+          <id>81410165</id>
+          <location class="VrpRoadLocation" reference="113"/>
+          <demand>5292</demand>
+          <previousStandstill class="VrpCustomer" reference="254"/>
+          <nextCustomer id="256">
+            <id>81410164</id>
+            <location class="VrpRoadLocation" reference="111"/>
+            <demand>33615</demand>
+            <previousStandstill class="VrpCustomer" reference="255"/>
+            <vehicle reference="253"/>
+          </nextCustomer>
+          <vehicle reference="253"/>
+        </nextCustomer>
+        <vehicle reference="253"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="257">
+      <id>43</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="258">
+        <id>81409466</id>
+        <location class="VrpRoadLocation" reference="49"/>
+        <demand>41653</demand>
+        <previousStandstill class="VrpVehicle" reference="257"/>
+        <vehicle reference="257"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="259">
+      <id>44</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="260">
+        <id>81409575</id>
+        <location class="VrpRoadLocation" reference="61"/>
+        <demand>47604</demand>
+        <previousStandstill class="VrpVehicle" reference="259"/>
+        <vehicle reference="259"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="261">
+      <id>45</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="262">
+        <id>81409490</id>
+        <location class="VrpRoadLocation" reference="71"/>
+        <demand>16235</demand>
+        <previousStandstill class="VrpVehicle" reference="261"/>
+        <nextCustomer id="263">
+          <id>81409641</id>
+          <location class="VrpRoadLocation" reference="69"/>
+          <demand>10117</demand>
+          <previousStandstill class="VrpCustomer" reference="262"/>
+          <nextCustomer id="264">
+            <id>81409642</id>
+            <location class="VrpRoadLocation" reference="65"/>
+            <demand>6606</demand>
+            <previousStandstill class="VrpCustomer" reference="263"/>
+            <nextCustomer id="265">
+              <id>81409650</id>
+              <location class="VrpRoadLocation" reference="67"/>
+              <demand>8348</demand>
+              <previousStandstill class="VrpCustomer" reference="264"/>
+              <vehicle reference="261"/>
+            </nextCustomer>
+            <vehicle reference="261"/>
+          </nextCustomer>
+          <vehicle reference="261"/>
+        </nextCustomer>
+        <vehicle reference="261"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="266">
+      <id>46</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="267">
+        <id>81410146</id>
+        <location class="VrpRoadLocation" reference="131"/>
+        <demand>43139</demand>
+        <previousStandstill class="VrpVehicle" reference="266"/>
+        <vehicle reference="266"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="268">
+      <id>47</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="269">
+        <id>81409375</id>
+        <location class="VrpRoadLocation" reference="29"/>
+        <demand>41731</demand>
+        <previousStandstill class="VrpVehicle" reference="268"/>
+        <nextCustomer id="270">
+          <id>81409780</id>
+          <location class="VrpRoadLocation" reference="55"/>
+          <demand>658</demand>
+          <previousStandstill class="VrpCustomer" reference="269"/>
+          <nextCustomer id="271">
+            <id>81409779</id>
+            <location class="VrpRoadLocation" reference="53"/>
+            <demand>2303</demand>
+            <previousStandstill class="VrpCustomer" reference="270"/>
+            <vehicle reference="268"/>
+          </nextCustomer>
+          <vehicle reference="268"/>
+        </nextCustomer>
+        <vehicle reference="268"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="272">
+      <id>48</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="273">
+        <id>81409327</id>
+        <location class="VrpRoadLocation" reference="5"/>
+        <demand>45767</demand>
+        <previousStandstill class="VrpVehicle" reference="272"/>
+        <vehicle reference="272"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="274">
+      <id>49</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="275">
+        <id>81410173</id>
+        <location class="VrpRoadLocation" reference="143"/>
+        <demand>1092</demand>
+        <previousStandstill class="VrpVehicle" reference="274"/>
+        <nextCustomer id="276">
+          <id>81410175</id>
+          <location class="VrpRoadLocation" reference="145"/>
+          <demand>41652</demand>
+          <previousStandstill class="VrpCustomer" reference="275"/>
+          <vehicle reference="274"/>
+        </nextCustomer>
+        <vehicle reference="274"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="277">
+      <id>50</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="278">
+      <id>51</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="279">
+        <id>81410169</id>
+        <location class="VrpRoadLocation" reference="79"/>
+        <demand>42801</demand>
+        <previousStandstill class="VrpVehicle" reference="278"/>
+        <vehicle reference="278"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="280">
+      <id>52</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+    </VrpVehicle>
+    <VrpVehicle id="281">
+      <id>53</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="282">
+        <id>81410180</id>
+        <location class="VrpRoadLocation" reference="117"/>
+        <demand>42014</demand>
+        <previousStandstill class="VrpVehicle" reference="281"/>
+        <vehicle reference="281"/>
+      </nextCustomer>
+    </VrpVehicle>
+    <VrpVehicle id="283">
+      <id>54</id>
+      <capacity>48000</capacity>
+      <depot reference="154"/>
+      <nextCustomer id="284">
+        <id>81409435</id>
+        <location class="VrpRoadLocation" reference="13"/>
+        <demand>43547</demand>
+        <previousStandstill class="VrpVehicle" reference="283"/>
+        <vehicle reference="283"/>
+      </nextCustomer>
+    </VrpVehicle>
+  </vehicleList>

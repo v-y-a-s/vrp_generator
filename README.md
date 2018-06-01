@@ -1,14 +1,14 @@
-# VRP file generator for Octa Planner
+# VRP file generator for Opta Planner
 
 ## Instructions:
 
 1. Clone this repositroy.
 2. Make sure you have installed Node JS 
 3. Open the direcotry and run npm install to download dependencies
-4. To run the server do node matrix_creator.js
+4. To run the server, open the directory and in cmd type => node matrix_creator.js
 5. Open a REST client 
 6. VRP Generator is now listening at localhost:3000
-7. Post your data set in the below JSON format mentioned in apit_test.rest using rest client. 
+7. Post your data set in the JSON format payload mentioned in apit_test.rest using rest client. 
 8. The output VRP file is stored as D:/res/problems_usa_zekleer+timestemamp.vrp
 9. open this path, get the .vrp file and feed it to the CVRP solver in opta planner. 
 10. Check if it satisfies the required output 👍
