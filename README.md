@@ -9,9 +9,14 @@
 5. Open a REST client 
 6. VRP Generator is now listening at localhost:3000
 7. Post your data set in the JSON format payload mentioned in apit_test.rest using rest client. 
-8. The output VRP file is stored as D:/res/problems_usa_zekleer+timestemamp.vrp
-9. open this path, get the .vrp file and feed it to the CVRP solver in opta planner. 
-10. Check if it satisfies the required output 👍
+8. The Address to VRP generation is available at "/go" using "POST"
+9. The output VRP file is stored as D:/res/problems_usa_zekleer+timestemamp.vrp
+10. open this path, get the .vrp file and feed it to the CVRP solver in opta planner. 
+11. The Opta planner gives a solution XML file. 
+12. "POST" the XML file contents for the tag <vehicleList> alone at "/parse" 
+13. A JSON output of grouped shipments are created and shipment count is shown.
+14. Use http://json2table.com/ to tabulate the results. 
+15. Check if it satisfies the required output 👍
 
 Other Details 
 
@@ -40,6 +45,12 @@ Result : {"LOC": "227 W Monroe St Chicago IL 60606 USA","WT": 0,
 https://jsonformatter.curiousconcept.com/
 
 http://jsonviewer.stack.hu/ 
+
+#### JSON to table tool: 
+
+Can be used to check the tabular output of the shipment orders created
+
+http://json2table.com/ 
 
 ### APIs Used : 
 
