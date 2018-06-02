@@ -89,7 +89,7 @@ Content-Type: application/xml
 
  
   <vehicleList id="155">
-    <VrpVehicle id="156">
+    <VrpVehicle id="156"> 
       <id>0</id>
       <capacity>48000</capacity>
       <depot reference="154"/>

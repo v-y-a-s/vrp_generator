@@ -29,6 +29,8 @@ app.post('/parse',function(req,response){
   // Solution parser for Opta planner VRP 
   var shipments = [];
   var vehicles = [];
+  var total_delivery_itmes = 0;
+  var total_delivery_weight = 0;
   var parseString = require('xml2js').parseString;
   console.log(req.body);
   var xml = req.body;
@@ -54,6 +56,10 @@ app.post('/parse',function(req,response){
             sum = sum + parseInt(element.demand);
           });
           // Creating shipments 
+          // Total Delivery Items
+          total_delivery_itmes = total_delivery_itmes+ ress.length;
+          // Total weight of all deliveries 
+          total_delivery_weight = total_delivery_weight + sum;        
           shipments.push({ "ID": (shipments.length + 1), "Total_Weight": sum, "Delivery_Count": ress.length, "Delivery_Orders": ress });
         }
       });
@@ -85,8 +91,17 @@ app.post('/parse',function(req,response){
       return res_arr;
     }
     // if everything goes well - solution
+    // Calculate performance parameters:
+    var vehicle_count = shipments.length;
+    // efficiency = Total weight of all deliveries / Total weight capacity of trucks  
+    var eff = total_delivery_weight / (vehicle_count*48000);
     response.status(200).type('application/json').send({
+      Delivery_Items_Count : total_delivery_itmes,
       Shipment_Count : shipments.length,
+      Vehicle_Count : vehicle_count,
+      Total_Shipment_Weight : total_delivery_weight,
+      Total_Fleet_Weight_Capacity : vehicle_count*48000,
+      Truck_Fill_Efficency : eff,
       Result : shipments
     });
   }
