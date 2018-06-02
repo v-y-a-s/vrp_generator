@@ -31,6 +31,7 @@ app.post('/parse',function(req,response){
   var vehicles = [];
   var total_delivery_itmes = 0;
   var total_delivery_weight = 0;
+  var deliver_line_item_groups = []; 
   var parseString = require('xml2js').parseString;
   console.log(req.body);
   var xml = req.body;
@@ -93,6 +94,19 @@ app.post('/parse',function(req,response){
     // if everything goes well - solution
     // Calculate performance parameters:
     var vehicle_count = shipments.length;
+    // Delivery grouping list
+    shipments.forEach(function(element){
+      var inp = element.ID;
+      console.log(inp);
+      element.Delivery_Orders.forEach(function(element){
+        var x = {};
+        x.group_id = inp;
+        x.delivery_id = element.delivery_id;
+        x.demand = element.demand;
+        deliver_line_item_groups.push(x);
+      });
+    });
+    //console.log(deliver_line_item_groups);
     // efficiency = Total weight of all deliveries / Total weight capacity of trucks  
     var eff = total_delivery_weight / (vehicle_count*48000);
     response.status(200).type('application/json').send({
@@ -102,7 +116,8 @@ app.post('/parse',function(req,response){
       Total_Shipment_Weight : total_delivery_weight,
       Total_Fleet_Weight_Capacity : vehicle_count*48000,
       Truck_Fill_Efficency : eff,
-      Result : shipments
+      Result : shipments,
+      Delivery_Items_Grouped_List : deliver_line_item_groups
     });
   }
   // Opps something broke due to xml 
