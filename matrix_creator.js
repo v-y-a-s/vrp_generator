@@ -1,5 +1,5 @@
 var http = require("https");
-var fs = require('fs');
+var fs = require('memfs');
 var NodeGeocoder = require('node-geocoder');
 var Ajv = require('ajv');
 var ajv = new Ajv({ allErrors: true });
@@ -9,35 +9,35 @@ var xmlparser = require('express-xml-bodyparser');
 var app = express();
 var touch = require("touch")
 var port = process.env.PORT || 3000;
-
+var new_path;
 var path = 'D:/file.vrp';
 
 // parsers only for XML 
-app.use('/parse',function(req, res, next) {
-  var data='';
+app.use('/parse', function (req, res, next) {
+  var data = '';
   req.setEncoding('utf8');
-  req.on('data', function(chunk) { 
-     data += chunk;
+  req.on('data', function (chunk) {
+    data += chunk;
   });
 
-  req.on('end', function() {
-      req.body = data;
-      next();
+  req.on('end', function () {
+    req.body = data;
+    next();
   });
 });
-app.post('/parse',function(req,response){
+app.post('/parse', function (req, response) {
   // Solution parser for Opta planner VRP 
   var shipments = [];
   var vehicles = [];
   var total_delivery_itmes = 0;
   var total_delivery_weight = 0;
-  var deliver_line_item_groups = []; 
+  var deliver_line_item_groups = [];
   var parseString = require('xml2js').parseString;
   console.log(req.body);
   var xml = req.body;
   try {
     parseString(xml, function (err, result) {
-  
+
       // Total Number of Vehicles.
       console.log("Allocated Maximum Number of Vehicles: " + result.vehicleList.VrpVehicle.length);
       // Each Vehicle ID + List of deliveries it handles and in that order.
@@ -58,17 +58,17 @@ app.post('/parse',function(req,response){
           });
           // Creating shipments 
           // Total Delivery Items
-          total_delivery_itmes = total_delivery_itmes+ ress.length;
+          total_delivery_itmes = total_delivery_itmes + ress.length;
           // Total weight of all deliveries 
-          total_delivery_weight = total_delivery_weight + sum;        
+          total_delivery_weight = total_delivery_weight + sum;
           shipments.push({ "ID": (shipments.length + 1), "Total_Weight": sum, "Delivery_Count": ress.length, "Delivery_Orders": ress });
         }
       });
-  
+
     });
-  
+
     function recursiveIteration(object, res_arr) {
-  
+
       //console.log(JSON.stringify(object));
       if (object.hasOwnProperty("nextCustomer")) {
         // First is the customer ID and then Demand
@@ -95,10 +95,10 @@ app.post('/parse',function(req,response){
     // Calculate performance parameters:
     var vehicle_count = shipments.length;
     // Delivery grouping list
-    shipments.forEach(function(element){
+    shipments.forEach(function (element) {
       var inp = element.ID;
       console.log(inp);
-      element.Delivery_Orders.forEach(function(element){
+      element.Delivery_Orders.forEach(function (element) {
         var x = {};
         x.group_id = inp;
         x.delivery_id = element.delivery_id;
@@ -108,27 +108,27 @@ app.post('/parse',function(req,response){
     });
     //console.log(deliver_line_item_groups);
     // efficiency = Total weight of all deliveries / Total weight capacity of trucks  
-    var eff = total_delivery_weight / (vehicle_count*48000);
+    var eff = total_delivery_weight / (vehicle_count * 48000);
     response.status(200).type('application/json').send({
-      Delivery_Items_Count : total_delivery_itmes,
-      Shipment_Count : shipments.length,
-      Vehicle_Count : vehicle_count,
-      Total_Shipment_Weight : total_delivery_weight,
-      Total_Fleet_Weight_Capacity : vehicle_count*48000,
-      Truck_Fill_Efficency : eff,
-      Result : shipments,
-      Delivery_Items_Grouped_List : deliver_line_item_groups
+      Delivery_Items_Count: total_delivery_itmes,
+      Shipment_Count: shipments.length,
+      Vehicle_Count: vehicle_count,
+      Total_Shipment_Weight: total_delivery_weight,
+      Total_Fleet_Weight_Capacity: vehicle_count * 48000,
+      Truck_Fill_Efficency: eff,
+      Result: shipments,
+      Delivery_Items_Grouped_List: deliver_line_item_groups
     });
   }
   // Opps something broke due to xml 
   catch (err) {
     //console.log("Something is wrong with the Vehicle List XML input");
     response.status(400).type('application/json').send({
-      Error : "Something is wrong with the Vehicle List XML input"
+      Error: "Something is wrong with the Vehicle List XML input"
     });
   }
-  
-  });
+
+});
 
 
 // body parse only for JSON payloads 
@@ -142,7 +142,7 @@ app.post("/go", function (req, response) {
 
   final_buffer = new Buffer("");
   var this_ts;
-  var new_path;
+
   var json_schema =
     {
       "type": "object",
@@ -268,8 +268,8 @@ app.post("/go", function (req, response) {
       console.log("EDGE_WEIGHT_FORMAT: FULL_MATRIX");
       b7 = new Buffer("EDGE_WEIGHT_UNIT_OF_MEASUREMENT: km" + "\n");
       console.log("EDGE_WEIGHT_UNIT_OF_MEASUREMENT: km");
-      b8 = new Buffer("CAPACITY : "+content.CAPACITY+"\n");
-      console.log("CAPACITY : "+content.CAPACITY);
+      b8 = new Buffer("CAPACITY : " + content.CAPACITY + "\n");
+      console.log("CAPACITY : " + content.CAPACITY);
 
       //  PRINTING  NODE COORD 
       console.log("NODE_COORD_SECTION");
@@ -294,12 +294,11 @@ app.post("/go", function (req, response) {
         }
       });
 
-      if(err_block === 1)
-      {
+      if (err_block === 1) {
         response.status(400).type('application/json').send({
-          error : "Check the Addresses for the following lines - GMaps API Failed to get Lat Longs",
-          error_count : lat_long_err.length,
-          address_indexes : lat_long_err
+          error: "Check the Addresses for the following lines - GMaps API Failed to get Lat Longs",
+          error_count: lat_long_err.length,
+          address_indexes: lat_long_err
         });
       }
 
@@ -370,47 +369,24 @@ app.post("/go", function (req, response) {
             b17 = new Buffer("EOF" + "\n");
             console.log("EOF");
             final_buffer = Buffer.concat([final_buffer, b14, b15, b16, b17]);
-
-
-            new_path = 'D:/res/problems_usa_zekleer' + this_ts + '-road-km-d1-n' + geocodes.length + '-k'+content.VEHICLES+'.vrp';
-            fs.writeFile(new_path, '', (err) => {
-              if (err) throw err;
-
-              console.log("The file was succesfully saved!");
+            new_path = '/problems_usa_zekleer-road-km-d1-n' + geocodes.length + '-k' + content.VEHICLES + '.vrp';
+            fs.writeFileSync(new_path, final_buffer);
+            response.status(200).type('application/json').send({
+              "File Path": new_path
             });
-
-            fs.open(new_path, 'w', function (err, fd) {
-              if (err) {
-                throw 'error opening file: ' + err;
-              }
-
-              fs.write(fd, final_buffer, 0, final_buffer.length, null, function (err) {
-                if (err) throw 'error writing file: ' + err;
-                fs.close(fd, function () {
-                  console.log('file written');
-                  // valid input if
-                  response.status(200).type('application/json').send({
-                    "File Path": new_path
-                  });
-                })
-              });
-            });
-
           });
         });
-
         req.end();
         // err block != 1 
       }
-
     });
-
   }
-
-
-
 });
 
-
+// Read 
+app.get("/vrp", function (req, res) {
+  res.setHeader("Content-Disposition", "attachment; filename=" + new_path);
+  res.status(200).type('application/octet-stream').send(fs.readFileSync(new_path, 'utf8'));
+});
 
 app.listen(port);
