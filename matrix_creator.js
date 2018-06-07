@@ -1,4 +1,5 @@
 var http = require("https");
+var js2xmlparser = require("js2xmlparser");
 var fs = require('memfs');
 var NodeGeocoder = require('node-geocoder');
 var Ajv = require('ajv');
@@ -10,7 +11,6 @@ var app = express();
 var touch = require("touch")
 var port = process.env.PORT || 3000;
 var new_path;
-var path = 'D:/file.vrp';
 
 // parsers only for XML 
 app.use('/parse', function (req, res, next) {
@@ -130,7 +130,6 @@ app.post('/parse', function (req, response) {
 
 });
 
-
 // body parse only for JSON payloads 
 app.use(bodyParser.json());
 // Parse for urlencoded payload
@@ -247,7 +246,7 @@ app.post("/go", function (req, response) {
           points.push('ERR');
         }
         else {
-          geocodes.push([input_ids[i], element.value[0].latitude, element.value[0].longitude, element.value[0].extra.googlePlaceId]);
+          geocodes.push([input_ids[i], element.value[0].latitude, element.value[0].longitude, input_ids[i]]);
           // insert to points array for computing distance matrix
           points.push([element.value[0].latitude, element.value[0].longitude]);
         }
@@ -383,10 +382,187 @@ app.post("/go", function (req, response) {
   }
 });
 
-// Read 
 app.get("/vrp", function (req, res) {
   res.setHeader("Content-Disposition", "attachment; filename=" + new_path);
   res.status(200).type('application/octet-stream').send(fs.readFileSync(new_path, 'utf8'));
+});
+
+app.post('/parser/json', function (req, res, next) {
+
+  var json_schema =
+    {
+      "type": "object",
+      "required":
+        [
+          "vehicleRouteList",
+          "distance",
+          "name",
+          "customerList"
+        ],
+      "properties":
+        {
+          "vehicleRouteList":
+            {
+              "type": "array",
+              "minItems": 3
+            }
+        }
+    };
+
+  var valid_inp = 0;
+  var validate = ajv.compile(json_schema);
+  function test(data) {
+    var valid = validate(data);
+    if (valid) {
+      valid_inp = 1;
+      console.log('Valid!');
+    }
+    else {
+      //console.log('Invalid: ' + ajv.errorsText(validate.errors));
+      response.status(400).type('application/json').send({
+        Result: ajv.errorsText(validate.errors)
+      });
+    }
+  }
+
+  test(req.body);
+  if (valid_inp === 1) {
+    var payload = req.body;
+    var opt = {};
+    inp = payload;
+    var ShipHeaderSet = {};
+    ShipHeaderSet.ShipHeader = [];
+    var ShipHeader = {};
+    var ShipItems = {};
+    var ShipItemsSet = {};
+    var sum = 0;
+    inp.vehicleRouteList.forEach(element => {
+      if (element.customerList.length > 0) {
+        ShipHeader = {};
+        ShipHeader.ShipmentNum = '1';
+        ShipHeader.ShipmentType = '001';
+        ShipHeader.ShippingType = '01';
+        ShipHeader.TransPlanPt = 'TP03';
+        ShipHeader.TarpRequest = '6LT';
+        ShipHeader.TruckType = '53';
+        var ShipItemsSet = {};
+        ShipItemsSet.ShipItems = [];
+        element.customerList.forEach(function (element, i) {
+          ShipItems = {};
+          ShipItems.Delivery = element.locationName;
+          ShipItems.Itenerary = i + 1;
+          ShipItems.latitude = element.latitude;
+          ShipItems.longitude = element.longitude;
+          ShipItems.demand = element.demand;
+          ShipItemsSet.ShipItems.push(ShipItems);
+        });
+        //console.log(ShipItemsSet);
+        ShipHeader.ShipItemsSet = ShipItemsSet;
+        ShipHeaderSet.ShipHeader.push(ShipHeader);
+      }
+
+    });
+    opt.ShipHeaderSet = ShipHeaderSet;
+    
+    var op_deliveries = 0;
+    opt.ShipHeaderSet.ShipHeader.forEach(element => {
+      op_deliveries = op_deliveries + element.ShipItemsSet.ShipItems.length;
+    });
+    //console.log(js2xmlparser.parse('ShipHeaderSet', opt.ShipHeaderSet));
+    console.log(op_deliveries);
+    console.log(opt.ShipHeaderSet.ShipHeader.length);
+    res.status(200).type('application/json').send({
+      Deliveries : op_deliveries,
+      Shipments : opt.ShipHeaderSet.ShipHeader.length,
+      ShipHeaderSet : opt.ShipHeaderSet
+      
+    });
+
+    
+  }
+});
+
+app.post('/parser/xml', function (req, res, next) {
+
+  var json_schema =
+    {
+      "type": "object",
+      "required":
+        [
+          "vehicleRouteList",
+          "distance",
+          "name",
+          "customerList"
+        ],
+      "properties":
+        {
+          "vehicleRouteList":
+            {
+              "type": "array",
+              "minItems": 3
+            }
+        }
+    };
+
+  var valid_inp = 0;
+  var validate = ajv.compile(json_schema);
+  function test(data) {
+    var valid = validate(data);
+    if (valid) {
+      valid_inp = 1;
+      console.log('Valid!');
+    }
+    else {
+      //console.log('Invalid: ' + ajv.errorsText(validate.errors));
+      response.status(400).type('application/json').send({
+        Result: ajv.errorsText(validate.errors)
+      });
+    }
+  }
+
+  test(req.body);
+  if (valid_inp === 1) {
+    var payload = req.body;
+    var opt = {};
+    inp = payload;
+    var ShipHeaderSet = {};
+    ShipHeaderSet.ShipHeader = [];
+    var ShipHeader = {};
+    var ShipItems = {};
+    var ShipItemsSet = {};
+    var sum = 0;
+    inp.vehicleRouteList.forEach(element => {
+      if (element.customerList.length > 0) {
+        ShipHeader = {};
+        ShipHeader.ShipmentNum = '1';
+        ShipHeader.ShipmentType = '001';
+        ShipHeader.ShippingType = '01';
+        ShipHeader.TransPlanPt = 'TP03';
+        ShipHeader.TarpRequest = '6LT';
+        ShipHeader.TruckType = '53';
+        var ShipItemsSet = {};
+        ShipItemsSet.ShipItems = [];
+        element.customerList.forEach(function (element, i) {
+          ShipItems = {};
+          ShipItems.Delivery = element.locationName;
+          ShipItems.Itenerary = i + 1;
+          ShipItems.latitude = element.latitude;
+          ShipItems.longitude = element.longitude;
+          ShipItems.demand = element.demand;
+          ShipItemsSet.ShipItems.push(ShipItems);
+        });
+        //console.log(ShipItemsSet);
+        ShipHeader.ShipItemsSet = ShipItemsSet;
+        ShipHeaderSet.ShipHeader.push(ShipHeader);
+      }
+
+    });
+    opt.ShipHeaderSet = ShipHeaderSet;
+    //console.log(js2xmlparser.parse('ShipHeaderSet', opt.ShipHeaderSet));
+    res.status(200).type('application/xml').send(js2xmlparser.parse('ShipHeaderSet', opt.ShipHeaderSet));
+
+    
+  }
 });
 
 app.listen(port);
