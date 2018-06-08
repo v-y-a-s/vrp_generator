@@ -421,7 +421,7 @@ app.post('/parser/json', function (req, res, next) {
     }
     else {
       //console.log('Invalid: ' + ajv.errorsText(validate.errors));
-      response.status(400).type('application/json').send({
+      res.status(400).type('application/json').send({
         Result: ajv.errorsText(validate.errors)
       });
     }
