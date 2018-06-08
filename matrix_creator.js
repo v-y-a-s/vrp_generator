@@ -162,7 +162,8 @@ app.post("/go", function (req, response) {
                   "required":
                     [
                       "LOC",
-                      "WT"
+                      "WT",
+                      "ID"
                     ],
                   "properties":
                     {
@@ -234,7 +235,7 @@ app.post("/go", function (req, response) {
     var points = [];
     geocoder.batchGeocode(input_locations, function (err, results) {
       // Return an array of type {error: false, value: []}
-      console.log(JSON.stringify(results));
+      //console.log(JSON.stringify(results));
       results.forEach(function (element, i) {
         //console.log(element);
         if (element.error != null) {
@@ -246,6 +247,7 @@ app.post("/go", function (req, response) {
           points.push('ERR');
         }
         else {
+          console.log(input_ids[i], element.value[0].latitude, element.value[0].longitude, input_ids[i]);
           geocodes.push([input_ids[i], element.value[0].latitude, element.value[0].longitude, input_ids[i]]);
           // insert to points array for computing distance matrix
           points.push([element.value[0].latitude, element.value[0].longitude]);
@@ -332,7 +334,7 @@ app.post("/go", function (req, response) {
             var body = Buffer.concat(chunks);
             var result = JSON.parse(body.toString());
             var dist = result.distances;
-            console.log(result);
+            // console.log(result);
             // convert meters to miles
             for (var i = 0; i < dist.length; i++) {
               var nest = dist[i];
@@ -469,8 +471,8 @@ app.post('/parser/json', function (req, res, next) {
       op_deliveries = op_deliveries + element.ShipItemsSet.ShipItems.length;
     });
     //console.log(js2xmlparser.parse('ShipHeaderSet', opt.ShipHeaderSet));
-    console.log(op_deliveries);
-    console.log(opt.ShipHeaderSet.ShipHeader.length);
+   // console.log(op_deliveries);
+    //console.log(opt.ShipHeaderSet.ShipHeader.length);
     res.status(200).type('application/json').send({
       Deliveries : op_deliveries,
       Shipments : opt.ShipHeaderSet.ShipHeader.length,

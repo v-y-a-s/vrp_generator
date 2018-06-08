@@ -1,5 +1,5 @@
 
-get http://localhost:3000/vrp/
+get https://opt.cfapps.us10.hana.ondemand.com/vrp
 
 ###
 post  http://localhost:3000/go
@@ -7,11 +7,32 @@ Content-Type: application/json
 
 {
   "CAPACITY" : 48000,
-  "VEHICLES" : 3,
+  "VEHICLES" : 40,
   "LOC_WT": [
-{"LOC": "227 W Monroe St Chicago IL 60606 USA","WT": 0,"ID":"9999999999"},
-{"LOC": "2516 INDUSTRY DRIVE            BURLINGTON      27215","WT": 45766.7,"ID":"81409327"},
-{"LOC": "83 TURNPIKE ROAD               IPSWICH         1938","WT": 45655.56,"ID":"81409331"}
+{
+  "LOC": "227 W Monroe St Chicago IL 60606 USA",
+  "WT": 0
+},
+{
+  "LOC": "UNITED PIPE & STEEL CORP. - WH 2516 INDUSTRY DRIVE BURLINGTON 27215",
+  "WT": 45766.7
+},
+{
+  "LOC": "UNITED PIPE & STEEL CORP. - WH 83 TURNPIKE ROAD IPSWICH 1938",
+  "WT": 45655.56
+},
+{
+  "LOC": "CED/PERRY MANN ELECTRIC 497 HUGER STREET Columbia 29201",
+  "WT": 20655
+},
+{
+  "LOC": "GAYLOR ELECTRIC-PHILLIP SIMMON 1613 CLEMENTS FERRY ROAD CHARLESTON 29492",
+  "WT": 21221.73
+},
+{
+  "LOC": "UNITED PIPE & STEEL CORP. - WH 206 SOUTH LILAC AVENUE RIALTO 92376",
+  "WT": 43546.08
+}
   ]
 }
 
@@ -823,7 +844,7 @@ Content-Type: application/xml
 
 ###
 
-post http://localhost:3000/parser/xml 
+post https://opt.cfapps.us10.hana.ondemand.com/parser/json 
 Content-Type: application/json
 
 {
@@ -2260,3 +2281,35 @@ Content-Type: application/json
     ],
     "feasible": true
   }
+
+
+### 
+
+// post vrp file  
+post https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/UploadDownloadFileServlet
+
+
+###
+
+get https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/setsFileName
+fileName: problems_usa_zekleer1528354397605-road-km-d1-n23-k55.vrp
+
+###
+
+get https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/getsFileName
+fileName: problems_usa_zekleer1528354397605-road-km-d1-n23-k55.vrp
+
+###
+
+get https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/UploadDownloadFileServlet?fileName=problems_usa_zekleer1528354397605-road-km-d1-n23-k55.vrp
+
+###
+post https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/solution/solve
+
+
+###
+post https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/solution/terminateEarly
+
+
+###
+get https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/solution/
