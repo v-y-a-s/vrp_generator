@@ -370,10 +370,10 @@ app.post("/go", function (req, response) {
             b17 = new Buffer("EOF" + "\n");
             console.log("EOF");
             final_buffer = Buffer.concat([final_buffer, b14, b15, b16, b17]);
-            new_path = '/problems_usa_zekleer-road-km-d1-n' + geocodes.length + '-k' + content.VEHICLES + '.vrp';
+            new_path = '/problems_usa_zekleer'+this_ts+'-road-km-d1-n' + geocodes.length + '-k' + content.VEHICLES + '.vrp';
             fs.writeFileSync(new_path, final_buffer);
             response.status(200).type('application/json').send({
-              "File Path": new_path
+              "File_Path": new_path
             });
           });
         });

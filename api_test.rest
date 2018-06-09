@@ -2,7 +2,7 @@
 get https://opt.cfapps.us10.hana.ondemand.com/vrp
 
 ###
-post  http://localhost:3000/go
+post  https://opt.cfapps.us10.hana.ondemand.com/go
 Content-Type: application/json
 
 {
@@ -849,12 +849,12 @@ post https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/UploadDownloadFile
 ###
 
 get https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/setsFileName
-fileName: problems_usa_zekleer1528354397605-road-km-d1-n23-k55.vrp
+fileName: problems_usa_zekleer-road-km-d1-n3-k40.vrp
 
 ###
 
 get https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/getsFileName
-fileName: problems_usa_zekleer1528354397605-road-km-d1-n23-k55.vrp
+
 
 ###
 
@@ -869,4 +869,4 @@ post https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/sol
 
 
 ###
-get https://cvrpsolverhfc882521.us3.hana.ondemand.com/solver/vehiclerouting/solution/
+get http://localhost:8080/solver/vehiclerouting/solution/
